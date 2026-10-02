@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hoodgum Game Studio</title>
+  <meta name="description" content="Hoodgum is an independent game studio making bright, bouncy adventures. Meet Fynn, our sun-soaked platformer in development.">
+  <meta name="theme-color" content="#1e130c">
+  <link rel="canonical" href="https://hoodgum.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Hoodgum Game Studio">
+  <meta property="og:title" content="Hoodgum Game Studio">
+  <meta property="og:description" content="Bright, bouncy adventures from an independent game studio. Meet Fynn.">
+  <meta property="og:url" content="https://hoodgum.com/">
+  <meta property="og:image" content="https://hoodgum.com/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/lilita-one.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#top" aria-label="Hoodgum home">
+        <img src="assets/favicon.png" alt="" width="40" height="40">
+        <span>Hoodgum</span>
+      </a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__links" id="nav-links" aria-label="Main">
+        <a href="#games">Games</a>
+        <a href="#studio">Studio</a>
+        <a href="#contact">Contact</a>
+        <span class="gem-counter" aria-live="polite" title="Sun-gems collected">
+          <img src="assets/sun-gem.webp" alt="" width="14" height="26">
+          <span id="gem-count">0</span>/<span id="gem-total">0</span>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-label="Welcome">
+      <div class="hero__sky" aria-hidden="true">
+        <span class="cloud cloud--1"></span>
+        <span class="cloud cloud--2"></span>
+        <span class="cloud cloud--3"></span>
+        <span class="cloud cloud--4"></span>
+      </div>
+
+      <div class="gems" aria-label="Hidden sun-gems">
+        <button class="gem" style="--x:9%;--y:30%;--d:0s;--s:1" aria-label="Collect sun-gem"></button>
+        <button class="gem" style="--x:86%;--y:22%;--d:-1.2s;--s:.8" aria-label="Collect sun-gem"></button>
+        <button class="gem" style="--x:18%;--y:72%;--d:-2.1s;--s:.7" aria-label="Collect sun-gem"></button>
+        <button class="gem" style="--x:78%;--y:75%;--d:-.6s;--s:1.1" aria-label="Collect sun-gem"></button>
+        <button class="gem" style="--x:36%;--y:87%;--d:-1.7s;--s:.6" aria-label="Collect sun-gem"></button>
+      </div>
+
+      <div class="hero__content">
+        <h1 class="hero__logo">
+          <img src="assets/hoodgum-logo.webp" alt="Hoodgum Game Studio" width="1200" height="635">
+        </h1>
+        <p class="hero__tagline">We make bright, bouncy adventures packed with heart, mischief and things to jump on.</p>
+        <div class="hero__actions">
+          <a class="btn btn--orange" href="#games">Meet Fynn</a>
+          <a class="btn btn--stone" href="#contact">Say hello</a>
+        </div>
+      </div>
+
+      <svg class="edge edge--grass" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 60 C120 20 240 80 360 50 S600 10 720 45 960 85 1080 50 1320 15 1440 45 V90 H0Z"/>
+      </svg>
+    </section>
+
+    <!-- FEATURED GAME -->
+    <section class="game" id="games" aria-labelledby="game-title">
+      <div class="wrap game__grid">
+        <figure class="game__art reveal">
+          <button class="frame" data-lightbox="assets/fynn-key-art.webp" aria-label="View Fynn key art larger">
+            <img src="assets/fynn-key-art.webp" alt="Fynn, a spiky-haired orange hero in a red scarf, leaps across ancient ruins chasing glowing sun-gems as clockwork bots give chase" width="1672" height="941" loading="lazy">
+          </button>
+        </figure>
+
+        <div class="game__copy reveal">
+          <p class="eyebrow"><span class="badge">In development</span></p>
+          <h2 id="game-title" class="title title--fynn">Fynn</h2>
+          <p class="lead">A sun-soaked 3D platforming adventure across a sky full of floating ruins.</p>
+          <p>Dash, leap and slide as Fynn, a fearless little hero with a big red scarf and even bigger shoes. Chase down shimmering sun-gems, outsmart rattling clockwork bots and uncover the secrets of the islands, with a glowing firefly friend lighting the way.</p>
+          <ul class="chips">
+            <li>Floating islands</li>
+            <li>Sun-gems to hunt</li>
+            <li>Clockwork baddies</li>
+            <li>A firefly sidekick</li>
+          </ul>
+          <a class="btn btn--orange" href="#contact">Follow development</a>
+        </div>
+      </div>
+
+      <div class="wrap gallery reveal">
+        <button class="frame frame--small" data-lightbox="assets/fynn-title.webp" aria-label="View Fynn title screen larger">
+          <img src="assets/fynn-title.webp" alt="Fynn title screen: a leafy wooden logo and loading bar over a bay of floating islands and waterfalls" width="1672" height="941" loading="lazy">
+        </button>
+        <div class="gallery__note">
+          <img src="assets/sun-gem.webp" alt="" width="40" height="75" class="gallery__gem">
+          <p><strong>Sun-gems</strong> are scattered all over Fynn's world. Hidden ones open up secret paths. (Psst, a few are floating around this page too.)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDIO -->
+    <section class="studio" id="studio" aria-labelledby="studio-title">
+      <svg class="edge edge--top" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 0 H1440 V30 C1300 70 1160 10 1000 40 S700 70 540 35 260 5 0 40Z"/>
+      </svg>
+      <div class="wrap">
+        <div class="studio__head reveal">
+          <h2 id="studio-title" class="title">Small studio.<br>Big hoods.</h2>
+          <p class="lead">Hoodgum is an independent game studio building colourful worlds that feel hand-carved, sun-warmed and a little bit cheeky.</p>
+        </div>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">🎮</div>
+            <h3>Play comes first</h3>
+            <p>If it isn't fun to run, jump and bump around in, it doesn't ship. Every idea earns its place with a controller in hand.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">🪵</div>
+            <h3>Handcrafted worlds</h3>
+            <p>Mossy stone, warm wood and skies you want to fall into. Places worth exploring every corner of.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">🧡</div>
+            <h3>Made with heart</h3>
+            <p>Characters with charm, a sense of humour, and adventures the whole family can enjoy together.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact__box reveal">
+        <img class="contact__mascot" src="assets/apple-touch-icon.png" alt="" width="120" height="120">
+        <h2 id="contact-title" class="title">Say hello</h2>
+        <p class="lead">Press, partners, players or just want to talk platformers? Our hood is always open.</p>
+        <a class="btn btn--orange btn--big" href="mailto:hello@hoodgum.com">hello@hoodgum.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <img src="assets/hoodgum-logo.webp" alt="Hoodgum Game Studio" width="180" height="95" loading="lazy">
+      <p>&copy; <span id="year">2026</span> Hoodgum Game Studio. All rights reserved.</p>
+      <a href="#top" class="footer__top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox__close" aria-label="Close">&times;</button>
+    <img src="" alt="">
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
