@@ -21,12 +21,12 @@
         <span class="cloud cloud--4"></span>
       </div>
 
-      <div class="gems" aria-label="Hidden sun-gems">
-        <button class="gem" style="--x:9%;--y:30%;--d:0s;--s:1" aria-label="Collect sun-gem"></button>
-        <button class="gem" style="--x:86%;--y:22%;--d:-1.2s;--s:.8" aria-label="Collect sun-gem"></button>
-        <button class="gem" style="--x:18%;--y:72%;--d:-2.1s;--s:.7" aria-label="Collect sun-gem"></button>
-        <button class="gem" style="--x:78%;--y:75%;--d:-.6s;--s:1.1" aria-label="Collect sun-gem"></button>
-        <button class="gem" style="--x:36%;--y:87%;--d:-1.7s;--s:.6" aria-label="Collect sun-gem"></button>
+      <div class="gems" aria-label="Hidden crystals">
+        <button class="gem" style="--x:9%;--y:30%;--d:0s;--s:1" aria-label="Collect crystal"></button>
+        <button class="gem" style="--x:86%;--y:22%;--d:-1.2s;--s:.8" aria-label="Collect crystal"></button>
+        <button class="gem" style="--x:18%;--y:72%;--d:-2.1s;--s:.7" aria-label="Collect crystal"></button>
+        <button class="gem" style="--x:78%;--y:75%;--d:-.6s;--s:1.1" aria-label="Collect crystal"></button>
+        <button class="gem" style="--x:36%;--y:87%;--d:-1.7s;--s:.6" aria-label="Collect crystal"></button>
       </div>
 
       <div class="hero__content">
@@ -50,23 +50,44 @@
       <div class="wrap game__grid">
         <figure class="game__art reveal">
           <button class="frame" data-lightbox="assets/fynn-key-art.webp" aria-label="View Fynn key art larger">
-            <img src="assets/fynn-key-art.webp" alt="Fynn, a spiky-haired orange hero in a red scarf, leaps across ancient ruins chasing glowing sun-gems as clockwork bots give chase" width="1672" height="941" loading="lazy">
+            <img src="assets/fynn-key-art.webp" alt="Fynn, a laid-back orange hero in a red scarf, leaps across mossy wooden ruins past glowing crystals, with enemies close behind" width="1672" height="941" loading="lazy">
           </button>
         </figure>
 
         <div class="game__copy reveal">
           <p class="eyebrow"><span class="badge">In development</span></p>
           <h2 id="game-title" class="title title--fynn">Fynn</h2>
-          <p class="lead">A sun-soaked 3D platforming adventure across a sky full of floating ruins.</p>
-          <p>Dash, leap and slide as Fynn, a fearless little hero with a big red scarf and even bigger shoes. Chase down shimmering sun-gems, outsmart rattling clockwork bots and uncover the secrets of the islands, with a glowing firefly friend lighting the way.</p>
-          <ul class="chips">
-            <li>Floating islands</li>
-            <li>Sun-gems to hunt</li>
-            <li>Clockwork baddies</li>
-            <li>A firefly sidekick</li>
-          </ul>
-          <a class="btn btn--orange" href="#contact">Follow development</a>
+          <p class="game__tagline">Run, swing and glide your way back to the light.</p>
+          <p>Fynn is a colourful 3D platformer about a laid-back hero chasing the stolen Cinderheart through winding forests, canyons and enemy camps. Run, glide, wall-run and swing through bright, layered worlds full of secrets.</p>
+          <p class="platforms"><span class="platforms__label">Play on</span>
+            <span class="chip">Browser</span>
+            <span class="chip">iPhone</span>
+            <span class="chip">iPad</span>
+          </p>
+          <a class="btn btn--orange" href="/devlog/">Follow development</a>
         </div>
+      </div>
+
+      <div class="wrap game__story">
+        <div class="story reveal">
+          <h3 class="story__title">They came in the night.<br><span>Fynn is going to get it back.</span></h3>
+          <p>The Cinderheart is the glowing crystal that keeps the village lights burning and the water wheels turning. One night, while everyone slept, the Hoodgums crept in and carried it off.</p>
+          <p>Fynn wakes to a dark village and a trail of footprints. Behind it all is the pompous warlord Krek and his army of Hoodgums: hooded, floating-handed troublemakers who are very pleased with themselves. Fynn is going to change that.</p>
+          <p>Fynn is a fast, playful 3D platformer built around movement that feels good. Sprint down winding forest trails, leap between ledges, glide over rivers, run along walls and swing from ring to ring across canyon gaps. Every level is packed with shortcuts, secret branches and upper and lower routes that reward curiosity.</p>
+          <p>The world is bright, hand-modelled and full of character, from sleepy lantern-lit villages to mossy canyons and Hoodgum camps. Day turns to night, lanterns glow, and something is always just around the next bend.</p>
+        </div>
+
+        <aside class="features reveal" aria-labelledby="features-title">
+          <h3 id="features-title" class="features__title">Features</h3>
+          <ul class="features__list">
+            <li><span class="features__icon" aria-hidden="true">🏃</span><span><strong>Fluid movement:</strong> run, double jump, glide, wall-run, wall-kick, roll, climb and swing</span></li>
+            <li><span class="features__icon" aria-hidden="true">🗺️</span><span><strong>Winding, layered levels</strong> with forks, upper and lower routes, and hidden secrets</span></li>
+            <li><span class="features__icon" aria-hidden="true">🛡️</span><span><strong>A cast of Hoodgums to outsmart:</strong> walkers, shield bearers, bomb throwers, chargers and gunners</span></li>
+            <li><span class="features__icon" aria-hidden="true">🌙</span><span><strong>Hand-modelled, storybook-style worlds</strong> with day and night</span></li>
+            <li><span class="features__icon" aria-hidden="true">😄</span><span><strong>A light-hearted adventure</strong> that never takes itself too seriously</span></li>
+            <li><span class="features__icon" aria-hidden="true">📱</span><span><strong>Play in your browser,</strong> or on iPhone and iPad</span></li>
+          </ul>
+        </aside>
       </div>
 
       <div class="wrap gallery reveal">
@@ -75,7 +96,7 @@
         </button>
         <div class="gallery__note">
           <img src="assets/sun-gem.webp" alt="" width="40" height="75" class="gallery__gem">
-          <p><strong>Sun-gems</strong> are scattered all over Fynn's world. Hidden ones open up secret paths. (Psst, a few are floating around this page too.)</p>
+          <p><strong>Psst!</strong> A few glowing crystals are floating around this page. Can you collect them all?</p>
         </div>
       </div>
     </section>

@@ -33,7 +33,7 @@
     toastTimer = setTimeout(() => toast.classList.remove("is-visible"), 3200);
   };
 
-  // Sun-gem collecting
+  // Crystal collecting
   const gems = [...document.querySelectorAll(".gem")];
   const countEl = document.getElementById("gem-count");
   const totalEl = document.getElementById("gem-total");
@@ -72,9 +72,9 @@
         counter.classList.add("bump");
       }
       if (collected === gems.length) {
-        showToast("You found every sun-gem! Fynn would be proud. ✨");
+        showToast("You found every crystal! Fynn would be proud. ✨");
       } else {
-        showToast(`Sun-gem collected! ${gems.length - collected} to go.`);
+        showToast(`Crystal collected! ${gems.length - collected} to go.`);
       }
     });
   });

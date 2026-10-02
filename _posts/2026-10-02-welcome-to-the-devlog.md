@@ -13,7 +13,7 @@ We're an independent game studio making bright, bouncy adventures, and this is w
 
 ## What you'll find here
 
-- **Progress updates** on Fynn, our sun-soaked 3D platformer
+- **Progress updates** on Fynn, our colourful 3D platformer
 - **Fresh art**: characters, worlds, props and the odd work-in-progress screenshot
 - **Behind the scenes**: how we design levels, tune jumps and build our tools
 - **Announcements**, as soon as we have news to share
