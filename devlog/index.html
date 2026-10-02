@@ -1,0 +1,27 @@
+---
+layout: default
+title: Devlog
+description: Progress updates, art and behind-the-scenes stories from Hoodgum Game Studio.
+---
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow"><span class="badge">Devlog</span></p>
+    <h1 class="title">News from the hood</h1>
+    <p class="lead">Progress updates, fresh art and behind-the-scenes stories from the making of Fynn and whatever comes next.</p>
+    <a class="page-head__rss" href="/devlog/feed.xml">Follow with RSS</a>
+  </div>
+</section>
+
+<section class="devlog-list">
+  <div class="wrap">
+    {%- if site.posts.size > 0 %}
+    <div class="post-grid">
+      {%- for post in site.posts %}
+      {% include post-card.html post=post %}
+      {%- endfor %}
+    </div>
+    {%- else %}
+    <p class="lead">No posts yet. Check back soon!</p>
+    {%- endif %}
+  </div>
+</section>

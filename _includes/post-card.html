@@ -1,0 +1,16 @@
+{%- assign post = include.post -%}
+<article class="post-card reveal">
+  <a class="post-card__link" href="{{ post.url }}">
+    {%- if post.cover %}
+    <div class="post-card__cover">
+      <img src="{{ post.cover }}" alt="" width="640" height="360" loading="lazy">
+    </div>
+    {%- endif %}
+    <div class="post-card__body">
+      <time class="post-card__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+      <h3 class="post-card__title">{{ post.title }}</h3>
+      <p class="post-card__excerpt">{{ post.description | default: post.excerpt | strip_html | truncatewords: 30 }}</p>
+      <span class="post-card__more">Read more →</span>
+    </div>
+  </a>
+</article>

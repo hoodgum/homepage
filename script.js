@@ -26,6 +26,7 @@
   const toast = document.getElementById("toast");
   let toastTimer;
   const showToast = (msg) => {
+    if (!toast) return;
     toast.textContent = msg;
     toast.classList.add("is-visible");
     clearTimeout(toastTimer);
@@ -38,7 +39,7 @@
   const totalEl = document.getElementById("gem-total");
   const counter = document.querySelector(".gem-counter");
   let collected = 0;
-  totalEl.textContent = gems.length;
+  if (totalEl) totalEl.textContent = gems.length;
 
   const sparkle = (x, y) => {
     for (let i = 0; i < 10; i++) {
@@ -64,10 +65,12 @@
       gem.setAttribute("aria-hidden", "true");
       gem.tabIndex = -1;
       collected++;
-      countEl.textContent = collected;
-      counter.classList.remove("bump");
-      void counter.offsetWidth;
-      counter.classList.add("bump");
+      if (countEl) countEl.textContent = collected;
+      if (counter) {
+        counter.classList.remove("bump");
+        void counter.offsetWidth;
+        counter.classList.add("bump");
+      }
       if (collected === gems.length) {
         showToast("You found every sun-gem! Fynn would be proud. ✨");
       } else {
@@ -92,8 +95,9 @@
     reveals.forEach((el) => el.classList.add("is-visible"));
   }
 
-  // Lightbox
+  // Lightbox (also opens images inside devlog posts)
   const lightbox = document.getElementById("lightbox");
+  if (!lightbox) return;
   const lbImg = lightbox.querySelector("img");
   const lbClose = lightbox.querySelector(".lightbox__close");
   let lastFocus;
@@ -114,6 +118,10 @@
 
   document.querySelectorAll("[data-lightbox]").forEach((btn) => {
     btn.addEventListener("click", () => openLightbox(btn.dataset.lightbox, btn.querySelector("img").alt));
+  });
+  document.querySelectorAll(".prose img, .post__cover img").forEach((img) => {
+    img.classList.add("zoomable");
+    img.addEventListener("click", () => openLightbox(img.currentSrc || img.src, img.alt));
   });
   lightbox.addEventListener("click", (e) => { if (e.target !== lbImg) closeLightbox(); });
   document.addEventListener("keydown", (e) => {

@@ -1,0 +1,32 @@
+title: Hoodgum Game Studio
+description: Hoodgum is an independent game studio making bright, bouncy adventures. Meet Fynn, our sun-soaked platformer in development.
+url: https://hoodgum.com
+baseurl: ""
+
+# Use only our own layouts (GitHub Pages adds a default theme otherwise)
+theme: null
+
+# Devlog post URLs look like /devlog/2026/10/02/post-title/
+permalink: /devlog/:year/:month/:day/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-feed
+
+feed:
+  path: devlog/feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

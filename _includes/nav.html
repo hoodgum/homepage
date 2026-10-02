@@ -1,0 +1,23 @@
+  <header class="nav{% if include.solid %} nav--solid{% endif %}" id="top">
+    <div class="nav__inner">
+      <a class="nav__brand" href="/" aria-label="Hoodgum home">
+        <img src="/assets/favicon.png" alt="" width="40" height="40">
+        <span>Hoodgum</span>
+      </a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__links" id="nav-links" aria-label="Main">
+        <a href="/#games">Games</a>
+        <a href="/devlog/"{% if page.url contains "/devlog/" %} aria-current="page"{% endif %}>Devlog</a>
+        <a href="/#studio">Studio</a>
+        <a href="/#contact">Contact</a>
+        {%- if include.gems %}
+        <span class="gem-counter" aria-live="polite" title="Sun-gems collected">
+          <img src="/assets/sun-gem.webp" alt="" width="14" height="26">
+          <span id="gem-count">0</span>/<span id="gem-total">0</span>
+        </span>
+        {%- endif %}
+      </nav>
+    </div>
+  </header>

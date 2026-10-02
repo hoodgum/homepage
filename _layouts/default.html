@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+{% include head.html %}
+</head>
+<body class="page">
+  <a class="skip" href="#main">Skip to content</a>
+{% include nav.html solid=true %}
+
+  <main id="main">
+{{ content }}
+  </main>
+
+{% include footer.html %}
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox__close" aria-label="Close">&times;</button>
+    <img src="" alt="">
+  </div>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>

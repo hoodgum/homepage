@@ -1,0 +1,28 @@
+{%- if page.title and page.url != "/" -%}
+  {%- assign page_title = page.title | append: " | Hoodgum" -%}
+{%- else -%}
+  {%- assign page_title = site.title -%}
+{%- endif -%}
+{%- assign page_description = page.description | default: site.description | strip_html | strip_newlines -%}
+{%- assign page_image = page.cover | default: "/assets/og-image.jpg" -%}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page_title }}</title>
+  <meta name="description" content="{{ page_description }}">
+  <meta name="theme-color" content="#1e130c">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ page_image | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="alternate" type="application/atom+xml" title="Hoodgum Devlog" href="/devlog/feed.xml">
+  <link rel="preload" href="/assets/fonts/lilita-one.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
